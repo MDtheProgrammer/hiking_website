@@ -14,19 +14,19 @@
     <header class="header" id="header">
         <!-- Nav Bar -->
         <nav class="navbar container">
-            <div class="navbox" id="navbox">
+            <div class="navbox f-sm" id="navbox">
                 <!-- logo -->
                 <div>               
                     <a href="./yong.html">
-                        <img height="35rem" src="./assets/Mountain-white.png" style="background-color: #735611;">
+                        <img height="40rem" src="./assets/Mountain-white.png" style="background-color: #3C0753;">
                     </a>
                 </div>
                 <!-- Menu -->
                 <div>
-                    <button height="35rem" class="menu-btn menu-toggle-icon" onclick="openMenu()" >
+                    <div class="menu-btn menu-toggle-icon" onclick="openMenu()" style="cursor: pointer" >
                         MENU
-                        <i class="fa fa-bars"></i>
-                    </button>
+                        <div class="fa fa-bars"></div>
+                    </div>
                 </div>
                 
             </div>
@@ -85,99 +85,92 @@
     </div>
     <!-- Experiences -->
     <div class="container">
-        <div class="box opacity hov-shrink">
-            <img class="box-img" src="./assets/night camp.jpg" alt="">
-            <div class="box-content caps">
-                <a href="">
-                    <div class="f-xl">The Experience</div>
-                    <div class="f-xsm m-sm not-caps">Come to our island and share your experience with others</div>
-                    <div class="f-sm"><button class="find-btn">
+            <a href="" class="box opacity hov-expand">
+                <img class="box-img" src="./assets/night camp.jpg" alt="">
+                <div class="box-content caps">
+                    <div>
+                        <div class="f-xl">The Experience</div>
+                        <div class="f-xsm m-sm not-caps">Come to our island and share your experience with others</div>
+                        <div class="f-sm"><button class="find-btn">
                         Find Out More
-                    </button></div>
-                </a>
-            </div>
-            
-        </div>
+                        </button></div>
+                    </div>
+                    
+                </div>
+            </a>
     </div>
     <!--  Activities-->
-    <div class="container activities-container">
-        <!-- Hikking -->
-        <div class="box">
-            <img class="box-img" src="./assets/hiking.jpg" alt="">
-            <div class="box-content caps">
-                <a href="">
-                    <div class="f-sm">Hiking</div>
-                    <div class="f-xxs"><button class="explore-btn">
-                        EXPLORE MORE
-                    </button></div>
-                </a>
-            </div>
-        </div>
-        <!-- Camping -->
-        <div class="box">
-            <img class="box-img" src="./assets/camping.png" alt="">
-            <div class="box-content caps">
-                <a href="">
-                    <div class="f-sm">Camping</div>
-                    <div class="f-xxs"><button class="explore-btn">
-                        EXPLORE MORE
-                    </button></div>
-                </a>
-            </div>
-        </div>
-        <!-- Accommodation -->
-        <div class="box">
-            <img class="box-img" src="./assets/accommodation.jpg" alt="">
-            <div class="box-content caps">
-                <a href="">
-                    <div class="f-sm">Accommodation</div>
-                    <div class="f-xxs"><button class="explore-btn">
-                        EXPLORE MORE
-                    </button></div>
-                </a>
-            </div>
+    <div class="activities-container">
+        <div class="f-xxl black caps activities-heading">Activites</div>
+        <hr class="event-card-line">
+        <div class="activities-list">
+            <!-- Hiking -->
+            <a href="">
+                <div class="activity-card">
+                <img src="./assets/hiking.jpg" alt="" class="activity-card-img">
+                <div class="activity-card-info">
+                    <div class="f-md">Hiking</div>
+                    <button class="f-sm activity-card-explore-btn">Explore more</button>
+                </div>
+                </div> 
+            </a>
+            <!-- Camping -->
+            <a href="" >
+                <div class="activity-card">
+                    <img src="./assets/camping.png" alt="" class="activity-card-img">
+                    <div class="activity-card-info">
+                        <div class="f-md">Camping</div>
+                        <button class="f-sm activity-card-explore-btn">Explore more</button>
+                    </div>                
+                </div>
+            </a>
+            <!-- Accommodation -->
+            <a href="" >
+                <div class="activity-card">
+                    <img src="./assets/accommodation.jpg" alt="" class="activity-card-img">
+                    <div class="activity-card-info">
+                        <div class="f-md">Accommodation</div>
+                        <button class="f-sm activity-card-explore-btn">Explore more</button>
+                    </div>                
+                </div>
+            </a>
         </div>
     </div>
     <!-- Current Events -->
     <div class="events-container">
-        <div class="f-xxl black caps d-flex" >Traning Running Events</div>
+        <div class="f-xxl black caps events-heading">Traning Running Events</div>
+        <hr class="event-card-line">
         <div class="events-list">
             <!-- Event 1 -->
-            <div class="event-box">
-                <div class="caps">
-                    <img class="box-img" src="./assets/events.jpg" alt="">
-                    <a href="">
-                        <div class="f-sm">Cycling</div>
-                        <div class="f-xxs"><button class="explore-btn">
-                            EXPLORE MORE
-                        </button></div>
-                    </a>
+            <a href="" class="event-card">
+                <img src="./assets/events.jpg" alt="" class="event-card-img">
+                <div class="event-card-info">
+                    <div class="f-md">Hiking</div>
+                    <div class="f-xsm">Lorem ipsum dolor sit amet consectetur adipisicing.</div>
+                    <hr class="event-card-line">
+                    <div class="f-sm event-card-explore-btn"><span>Explore more</span><span class="fa fa-angle-right"></span></div>
                 </div>
-            </div>
+            </a>
             <!-- Camping -->
-            <div class="event-box">
-                <div class="caps">
-                    <img class="box-img" src="./assets/foots.jpeg" alt="">
-                    <a href="">
-                        <div class="f-sm">Camping</div>
-                        <div class="f-xxs"><button class="explore-btn">
-                            EXPLORE MORE
-                        </button></div>
-                    </a>
+            <a href="" class="event-card">
+                <img src="./assets/foots.jpeg" alt="" class="event-card-img">
+                <div class="event-card-info">
+                    <div class="f-md">Hiking</div>
+                    <div class="f-xsm">Lorem ipsum dolor sit amet consectetur adipisicing.</div>
+                    <hr class="event-card-line">
+                    <div class="f-sm event-card-explore-btn"><span>Explore more</span><span class="fa fa-angle-right"></span></div>
                 </div>
-            </div>
+            </a>
             <!-- Accommodation -->
-            <div class="event-box">
-                <div class="caps">
-                    <img class="box-img" src="./assets/gunnung.jpeg" alt="">
-                    <a href="">
-                        <div class="f-sm">Flying </div>
-                        <div class="f-xxs"><button class="explore-btn">
-                            EXPLORE MORE
-                        </button></div>
-                    </a>
+            <a href="" class="event-card">
+                <img src="./assets/gunnung.jpeg" alt="" class="event-card-img">
+                <div class="event-card-info">
+                    <div class="f-md">Hiking</div>
+                    <div class="f-xsm">Lorem ipsum dolor sit amet consectetur adipisicing.</div>
+                    <hr class="event-card-line">
+                    <div class="f-sm event-card-explore-btn"><span>Explore more</span><span class="fa fa-angle-right"></span></div>
                 </div>
-            </div>
+            </a>
         </div>
     </div>
     
