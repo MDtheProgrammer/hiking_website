@@ -4,21 +4,6 @@ const selectElement = (selector) => {
     throw new Error(`Something went wrong! Make sure that ${selector} exists/is typed correctly.`);  
 };
 
-// const menuOpenBtn = selectElement('#menu-toggle-icon');
-// const menuCloseBtn = selectElement('#menu-close-icon');
-// const menuContainer = selectElement('#menu');
-
-// menuOpenBtn.addEventListener('click', () => menuContainer.classList.add('activated'));
-
-// menuCloseBtn.addEventListener('click', () => menuContainer.classList.remove('activated'));
-
-// window.addEventListener('keyup', event => {
-//     if(event.key === "Escape") menuContainer.classList.remove('activated');
-// });
-// const navboxControl = selectElement('#navbox');
-// const menuOpenBtn = selectElement('#menu-toggle-icon');
-// const menuCloseBtn = selectElement('#close-btn');
-
 function openMenu() {
     document.getElementById("menu").classList.add("show");
 }
@@ -32,3 +17,56 @@ window.onclick = (event) =>{
 }
 menu.addEventListener('click', event => event.stopPropagation());
   
+// Accomodation image slider
+const SLIDER_WIDTH = 5;
+
+let coreUrl = '/assets/hotels';
+let images = [
+  `${coreUrl}1.jpg`,
+  `${coreUrl}2.jpg`,
+  `${coreUrl}3.jpg`,
+  `${coreUrl}4.jpeg`,
+  `${coreUrl}5.jpg`,
+  `${coreUrl}6.jpg`
+];
+
+
+
+document.getElementById('leftBtn').addEventListener('mouseup', () => {
+    permuteToLeft();
+    insertToDom();
+});
+
+document.getElementById('rightBtn').addEventListener('mouseup', () => {
+    permuteToRight();
+    insertToDom();
+})
+
+
+
+insertToDom = () => {
+  let slider = document.getElementById('slider');
+  let seperateView = document.getElementById('seperate-view');
+    for(let i = 0; i < SLIDER_WIDTH; i++) {
+        slider.getElementsByTagName('img')[i].src = images[i];
+    }
+    slider.getElementsByTagName('img')[2].style.transform = 'scale(1.2)';
+    slider.getElementsByTagName('img')[2].style.margin = '6rem';
+    seperateView.getElementsByTagName('img')[0].src = images[2];
+}
+
+permuteToLeft = () => {
+  let tmp = images[0];
+    for(let i = 0; i < images.length - 1; i++) {
+        images[i] = images[i+1]
+    }
+    images[images.length - 1] = tmp;
+}
+
+permuteToRight = () => {
+   let tmp = images[images.length - 1];
+    for(let i = images.length - 1; i > 0; i--) {
+        images[i] = images[i-1]
+    }
+    images[0] = tmp;
+}

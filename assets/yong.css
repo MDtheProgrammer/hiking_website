@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Fugaz+One&family=Nunito+Sans:wght@200&family=Poiret+One&display=swap');
 
+/* @font-face {
+    font-family: 'Hike More';
+    src: url('/assets/hike-more-font/Hike More Regular.ttf') format('truetype');
+} */
 :root{
     /* font */
     --font-family: "Poiret One", sans-serif;
@@ -34,6 +38,7 @@
     /* used colors */
     --theme-color: #3C0753;
     --font-color: #030637;
+    --theme-color-light: #3c075361;
 }
 *{
     margin: 0;
@@ -225,11 +230,12 @@ img{
     width: 0;
     top: 0;
     left: 0;
-    background-color: #111;
+    background-color: var(--theme-color);
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
     z-index:3;
+    color: white;
 }
 .show{
     display: block;
@@ -268,6 +274,11 @@ ul{
     height: 8rem;
     align-items: center;
     justify-content: space-between;
+}
+/* Experiences */
+.experience-img{
+    object-fit: cover;
+    height: 75vh;
 }
 
 /* Acitivies Positioning */
@@ -311,7 +322,6 @@ ul{
     color: white;
     transition: 0.25s;
     box-shadow: 0.1rem 0.1rem 0.1rem 0.2rem var(--theme-color);
-    
 }
 /* footer */
 footer{
@@ -369,6 +379,7 @@ footer{
     padding: 0; 
 }
 .activity-card-img{
+    object-fit: cover;
     height: 50rem;
     border-radius: 3rem;
     transition: 200ms cubic-bezier(.2,0,0,1);
@@ -477,6 +488,46 @@ hr.event-card-line{
     border-image: linear-gradient(to right, #5a2d20, #b86e49);
     border-image-slice: 1;
 }
+
+/* image gallery */
+.gallery-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 5rem;
+}
+.seperate-view img{
+    width:50rem;
+    height: 50rem;
+    object-fit: cover;
+    box-shadow: 0 0 5px black;
+    border-radius: 2rem;
+}
+#slider img {
+    width:20rem;
+    height: 25rem;
+    object-fit: cover;
+    box-shadow: 0 0 5px rgba(0,0,0,0.7);
+    border-radius: 2rem;
+    margin: 1rem;
+  }
+  
+  #slider button{
+    width: 5rem;
+    height: 20rem;
+    background-color: var(--theme-color-light);
+    color:#fff;
+    cursor: pointer;
+    border-radius: 2rem;
+  }
+  #slider button:active{
+    box-shadow: 0 0 10px rgba(0,0,0,0.7);
+  }
+  #slider button:hover{
+    background-color: var(--theme-color);
+    box-shadow: 0 0 10px rgba(0,0,0,0.7);
+  }
 /* social media button */
 .social-media-btn{
     display: flex;
