@@ -4,18 +4,31 @@ const selectElement = (selector) => {
     throw new Error(`Something went wrong! Make sure that ${selector} exists/is typed correctly.`);  
 };
 
-function openMenu() {
-    document.getElementById("menu").classList.add("show");
-}
-window.onclick = (event) =>{
-    if(!event.target.matches('.menu-btn')){
-        if(document.getElementById("menu").classList.contains("show")){
-            document.getElementById("menu").classList.remove("show");
-        }
+
+// navbar
+document.addEventListener('scroll', () => {
+    const header = document.querySelector('header');
+    if(window.scrollY > 0){
+        header.classList.add('scrolled');
     }
-    console.log("window clicked clicked clicked");
-}
-menu.addEventListener('click', event => event.stopPropagation());
+    else{
+        header.classList.remove('scrolled');
+    }
+})
+
+
+// function openMenu() {
+//     document.getElementById("menu").classList.add("show");
+// }
+// window.onclick = (event) =>{
+//     if(!event.target.matches('.menu-btn')){
+//         if(document.getElementById("menu").classList.contains("show")){
+//             document.getElementById("menu").classList.remove("show");
+//         }
+//     }
+//     console.log("window clicked clicked clicked");
+// }
+// menu.addEventListener('click', event => event.stopPropagation());
   
 // Accomodation image slider
 const SLIDER_WIDTH = 5;
